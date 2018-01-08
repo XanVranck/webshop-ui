@@ -15,10 +15,11 @@ import {
 } from '@angular/material';
 import 'hammerjs';
 import { FormsModule } from '@angular/forms';
-import {HttpClient, HttpClientModule, HttpHeaders} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import {AppComponent} from './app.component';
 import {LoginComponent} from './component/login/login.component';
+import { LoginService } from './service/login/login.service';
 
 
 @NgModule({
@@ -38,13 +39,12 @@ import {LoginComponent} from './component/login/login.component';
     MatInputModule,
     FormsModule,
     HttpClientModule,
-    HttpClient,
-    HttpHeaders,
     MatSelectModule,
     MatSlideToggleModule,
     MatFormFieldModule
   ],
   providers: [
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

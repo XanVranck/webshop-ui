@@ -9,14 +9,14 @@
       <mat-grid-tile [colspan] = "4" style="height: 50px">
         <form>
           <mat-input-container class="full-width">
-            <input  autocomplete="new-text" matInput type="text" name="usernameInput" id='usernameInput'
+            <input  autocomplete="new-text" matInput type="text" [(ngModel)]="username" name="usernameInput" id='usernameInput'
                     placeholder="Username">
           </mat-input-container>
           <mat-input-container class="full-width">
-            <input autocomplete="new-password" matInput type="password" name="passwordInput" id='passwordInput'
+            <input autocomplete="new-password" matInput type="password" [(ngModel)]="password" name="passwordInput" id='passwordInput'
                    placeholder="Password">
           </mat-input-container>
-          <button mat-raised-button="SOMETHING" type="submit" class="mat-primary" (click)="login(username, password)">LOGIN</button>
+          <button mat-raised-button="SOMETHING" type="submit" class="mat-primary" (click)="login()">LOGIN</button>
         </form>
       </mat-grid-tile>
 
