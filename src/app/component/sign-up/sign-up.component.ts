@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {SignUpService} from '../../service/sign-up/sign-up.service';
 import {Router} from '@angular/router';
 import {User} from '../../model/user';
-import {catchError} from 'rxjs/operators';
 
 @Component({
   selector: 'app-sign-up',

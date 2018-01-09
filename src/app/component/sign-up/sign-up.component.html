@@ -17,7 +17,7 @@
                    placeholder="Password">
           </mat-input-container>
           <mat-input-container class="full-width">
-            <input required="required" autocomplete="new-text" matInput pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"  type="email" [(ngModel)]="user.email" name="emailInput" id='emailInput'
+            <input required="required" autocomplete="new-text" matInput type="email" [(ngModel)]="user.email" name="emailInput" id='emailInput'
                    placeholder="E-mail">
           </mat-input-container>
           <button mat-raised-button="SOMETHING" type="submit" class="mat-primary" (click)="signUp()">Sign up</button>
