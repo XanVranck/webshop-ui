@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {SignUpService} from '../../service/sign-up/sign-up.service';
+import {Router} from '@angular/router';
+import {User} from '../../model/user';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor() { }
+  private user: User = {'username': '', 'password': '', 'email': ''};
+
+  constructor(private signUpService: SignUpService, private router: Router) {
+  }
 
   ngOnInit() {
   }
 
+  signUp() {
+    if (this.user.username !== '' && this.user.password !== ''
+      && this.user.email.match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
+      this.signUpService.signUp(this.user).subscribe(
+        (resp) => {
+          console.log(resp);
+          this.router.navigateByUrl('/login');
+        },
+        (err) => {
+          alert(err);
+        }
+      );
+    }
+  }
 }

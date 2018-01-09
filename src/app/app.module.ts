@@ -21,6 +21,7 @@ import {AppComponent} from './app.component';
 import {LoginComponent} from './component/login/login.component';
 import { LoginService } from './service/login/login.service';
 import { SignUpComponent } from './component/sign-up/sign-up.component';
+import {SignUpService} from './service/sign-up/sign-up.service';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { SignUpComponent } from './component/sign-up/sign-up.component';
     MatFormFieldModule
   ],
   providers: [
-    LoginService
+    LoginService,
+    SignUpService
   ],
   bootstrap: [AppComponent]
 })
