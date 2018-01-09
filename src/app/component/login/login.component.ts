@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
         this.router.navigateByUrl('/sign-up');
       },
       (err) => {
-        alert(err);
+        alert(err.error.message);
       }
     );
   }

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {SignUpService} from '../../service/sign-up/sign-up.service';
 import {Router} from '@angular/router';
 import {User} from '../../model/user';
+import {catchError} from 'rxjs/operators';
 
 @Component({
   selector: 'app-sign-up',
@@ -20,14 +21,14 @@ export class SignUpComponent implements OnInit {
 
   signUp() {
     if (this.user.username !== '' && this.user.password !== ''
-      && this.user.email.match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
+      && this.user.email.match('[^@]+@[^@]+\.[a-zA-Z]{2,6}')) {
       this.signUpService.signUp(this.user).subscribe(
         (resp) => {
           console.log(resp);
           this.router.navigateByUrl('/login');
         },
         (err) => {
-          alert(err);
+          alert(err.error.message);
         }
       );
     }
