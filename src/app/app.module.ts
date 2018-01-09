@@ -20,12 +20,14 @@ import { HttpClientModule } from '@angular/common/http';
 import {AppComponent} from './app.component';
 import {LoginComponent} from './component/login/login.component';
 import { LoginService } from './service/login/login.service';
+import { SignUpComponent } from './component/sign-up/sign-up.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
