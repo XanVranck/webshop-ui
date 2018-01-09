@@ -21,7 +21,9 @@ export class LoginService {
       .subscribe(
         (resp) => {
           console.log(resp.headers.get('Authorization'));
-          localStorage.setItem('Authorization', resp.headers.get('Authorization'));
+          console.log(resp.headers.get('Role'));
+          localStorage.setItem('token', resp.headers.get('Authorization'));
+          localStorage.setItem('role', resp.headers.get('Role'));
         },
         (err) => {
           console.log('resp-error');
