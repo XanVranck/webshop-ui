@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {User} from '../../model/user';
+import {Component, OnInit} from '@angular/core';
 import {LoginService} from '../../service/login/login.service';
 import {Router} from '@angular/router';
 
@@ -13,6 +12,8 @@ export class LoginComponent implements OnInit {
   private username: string;
   private password: string;
 
+  private loggedIn: boolean;
+
   constructor(private loginService: LoginService, private router: Router) { }
 
   ngOnInit() {
@@ -23,13 +24,18 @@ export class LoginComponent implements OnInit {
       (resp) => {
         localStorage.setItem('token', resp.headers.get('Authorization'));
         localStorage.setItem('role', resp.headers.get('Role'));
+        this.loggedIn = true
         this.router.navigateByUrl('/sign-up');
       },
       (err) => {
         alert(err.error.message);
+        this.loggedIn = false;
       }
     );
   }
 
+  public isLoggedIn(): boolean {
+    return this.loggedIn;
+}
 
 }
