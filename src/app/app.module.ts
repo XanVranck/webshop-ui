@@ -52,9 +52,13 @@ import { NavBarComponent } from './component/nav-bar/nav-bar.component';
   ],
   providers: [
     LoginService,
-    SignUpService
+    SignUpService,
+    LoginComponent,
+    NavBarComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule {
 }
