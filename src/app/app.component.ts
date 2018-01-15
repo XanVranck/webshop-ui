@@ -6,13 +6,6 @@ import { NavBarComponent } from './component/nav-bar/nav-bar.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
   title = 'app';
-
-  constructor(private navBarComponent: NavBarComponent) { }
-
-
-  ngOnInit() {
-    this.navBarComponent.ngOnInit();
-  }
 }

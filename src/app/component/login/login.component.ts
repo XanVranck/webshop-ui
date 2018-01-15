@@ -23,6 +23,9 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    if(localStorage.getItem('isLoggedIn') === 'true'){
+      alert('You are already logged in!')
+    }else{
     this.loginService.login(this.username, this.password).subscribe(
       (resp) => {
         localStorage.setItem('token', resp.headers.get('Authorization'));
@@ -36,5 +39,6 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('isLoggedIn', 'false');
       }
     );
+  }
   }
 }
