@@ -13,13 +13,12 @@ export class LoginComponent implements OnInit {
   private username: string;
   private password: string;
 
-  private navBarComponent: NavBarComponent
+  
 
-  constructor(private loginService: LoginService, private router: Router) { 
-    this.navBarComponent = new NavBarComponent();
-  }
+  constructor(private loginService: LoginService, private router: Router, private navBarComponent: NavBarComponent ) {   }
 
   ngOnInit() {
+    console.log("token", localStorage.getItem('token'));
   }
 
   login() {

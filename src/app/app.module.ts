@@ -24,8 +24,7 @@ import { SignUpComponent } from './component/sign-up/sign-up.component';
 import {SignUpService} from './service/sign-up/sign-up.service';
 import { ProductOverviewComponent } from './component/product-overview/product-overview.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
-import { LogComponent } from './component/log/log.component';
-import { LogOutComponent } from './component/log-out/log-out.component';
+import { LogOutService } from './service/log-out/log-out.service';
 
 
 @NgModule({
@@ -34,9 +33,7 @@ import { LogOutComponent } from './component/log-out/log-out.component';
     LoginComponent,
     SignUpComponent,
     ProductOverviewComponent,
-    NavBarComponent,
-    LogComponent,
-    LogOutComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +55,8 @@ import { LogOutComponent } from './component/log-out/log-out.component';
     LoginService,
     SignUpService,
     LoginComponent,
-    NavBarComponent
+    NavBarComponent,
+    LogOutService
   ],
   bootstrap: [
     AppComponent
