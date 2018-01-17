@@ -8,5 +8,6 @@
 .flex-item{
     height: 200px;
     width: 200px;
-    padding: 10px;
+    padding-top: 5px;
+    padding-right: 5px;
 }
