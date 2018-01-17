@@ -25,6 +25,7 @@ import {SignUpService} from './service/sign-up/sign-up.service';
 import { ProductOverviewComponent } from './component/product-overview/product-overview.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { LogOutService } from './service/log-out/log-out.service';
+import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { LogOutService } from './service/log-out/log-out.service';
     LoginComponent,
     SignUpComponent,
     ProductOverviewComponent,
-    NavBarComponent
+    NavBarComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

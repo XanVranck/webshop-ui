@@ -1,6 +1,5 @@
 <mat-toolbar color="primary">
     <button mat-button routerLink="../product-overview">Product overview</button>
-    <button mat-button>Menu Option 02</button>
     <span class="fill-remaining-space"></span>
     <button mat-button *ngIf="!isLoggedIn()" routerLink="login">Login</button>
     <button mat-button *ngIf="isLoggedIn()" routerLink="product-overview" (click)="logOut()">Logout</button>
