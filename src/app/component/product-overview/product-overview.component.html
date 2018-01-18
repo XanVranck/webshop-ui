@@ -1,12 +1,4 @@
 <div>
     <div class="parent">  
-        <img class = "child"style="height: 200px;width: 200px;" src="../../../assets/img/thumbnail/pilea.JPG"/>
-        <img class = "child"style="height: 200px;width: 200px;" src="../../../assets/img/thumbnail/pilea.JPG"/>
-         <img class = "child"style="height: 200px;width: 200px;" src="../../../assets/img/thumbnail/pilea.JPG"/>
-         <img class = "child"style="height: 200px;width: 200px;" src="../../../assets/img/thumbnail/pilea.JPG"/> 
-         <img class = "child"style="height: 200px;width: 200px;" src="../../../assets/img/thumbnail/pilea.JPG"/> 
-         <img class = "child"style="height: 200px;width: 200px;" src="../../../assets/img/thumbnail/pilea.JPG"/>
-         <img class = "child"style="height: 200px;width: 200px;" src="../../../assets/img/thumbnail/pilea.JPG"/>
-         <img class = "child"style="height: 200px;width: 200px;" src="../../../assets/img/thumbnail/pilea.JPG"/>
-    </div>
+        <img *ngFor="let filePath of filePaths" class="child" style="height: 200px;width: 200px;" src="{{filePath}}"/>
 </div>

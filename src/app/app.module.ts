@@ -26,6 +26,7 @@ import { ProductOverviewComponent } from './component/product-overview/product-o
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { LogOutService } from './service/log-out/log-out.service';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
+import { ProductOverviewService } from './service/product-overview/product-overview.service';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { ProductDetailComponent } from './component/product-detail/product-detai
     SignUpService,
     LoginComponent,
     NavBarComponent,
-    LogOutService
+    LogOutService,
+    ProductOverviewService
   ],
   bootstrap: [
     AppComponent
