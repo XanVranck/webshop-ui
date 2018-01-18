@@ -1,11 +1,11 @@
-.flex-container {
+.parent {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     margin: auto;
   }
 
-.flex-item{
+.child {
     height: 200px;
     width: 200px;
     padding-top: 5px;
